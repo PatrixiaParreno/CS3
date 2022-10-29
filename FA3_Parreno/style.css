@@ -1,0 +1,39 @@
+html{
+	background-image: url(images/BGimage.jpg);
+}
+
+h1{
+	text-align:center;
+	background-color: #F6F6C9;
+	font-family: monospace;
+	border:2px dotted;
+	border-color: blue;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 15px;
+	padding-left: 15px;
+	width: 250px
+	margin-bottom: 20px;
+}
+
+p{
+	background-color: hsl(181, 100%, 81%);
+	text-align: justified;
+	margin-left: 420px;
+	font-style: italic;
+	padding: 20px;
+	border: 3px black;
+	border-top-style: dashed;
+	border-bottom-style: dashed;
+	border-right-style: solid;
+	border-left-style: solid;
+	width: 500px;
+}
+
+span{
+	font-weight: bold; 
+	font-style: italic;
+	color: rgb (251,224,0);
+	margin-left: 2px
+	margin-right: 5px;
+}
