@@ -1,0 +1,58 @@
+* {
+	font-family:monospace;
+	margin: 0
+	padding: 0;
+}
+
+h1 {
+	text-align:center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.des {
+	text-align: center;
+}
+
+.section {
+	width: 33.3%;
+	float: left;
+}
+
+.content {
+	position: relative;
+	border: 1px solid black;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: #D3D3D3;
+}
+
+h2 {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 100px;
+	text-align: center;
+	border: 1px dashed black;
+}
+
+p {
+	margin-top: 45px;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+#forehand {
+	background-color: red;
+	color: white;
+}
+
+#backhand {
+	background-color: #000000;
+	color: white;
+}
+
+#RefVids {
+	background-color: yellow;
+}

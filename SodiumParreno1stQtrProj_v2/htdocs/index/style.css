@@ -1,0 +1,50 @@
+h1{
+	text-align: center;
+}
+
+#img1{
+	width: 250px;
+	height: 200px;
+	float: left;
+	margin: 10px;
+}
+
+#p1{
+	text-align: left;
+	font size: 15px;
+	margin: 10px 10px 10px 200px;
+}
+
+.des1{
+	width:  65%;
+	margin: 10px 100px 30px 30px;
+	border: 1px solid white;
+	padding: 0px;
+	clear:left;
+}
+
+.des2{
+	border: 1px solid black;
+	padding: 30px;
+	margin: 200px 30px 30px 30px;
+}
+
+#img2{
+	float: right;
+	width: 230px;
+	height: 120px;
+}
+
+.des3{
+	border: 1px solid black;
+	float: right;
+	wight: 30%;
+	margin: 10px 10px 300px 10px;
+	margin-left: 5px;
+	margin-right:5px;
+}
+
+h3 {
+	margin-left: 5px;
+	margin-right:5px;
+}
