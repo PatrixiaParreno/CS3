@@ -1,0 +1,53 @@
+*{
+	background-color: #FFFDD0;
+	margin-left: 20px;
+	margin-right: 20px;
+	color:black;
+}
+
+header{
+	text-align: center;
+	font-size: 40px;
+	font-family: arial;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FFFDD0;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #CFB284;
+}
+
+div{ 
+	border: 7px solid lightpink;
+
+h2{
+	font-family: arial;
+	color: DarkBlue;
+}
+
+h3{
+	font-family: arial;
+	color:black
+}
+
+p{
+	font-family: monospace;
+}

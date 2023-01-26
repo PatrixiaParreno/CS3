@@ -1,0 +1,55 @@
+header{
+	text-align: center;
+	font-size: 45px;
+	font-family: monospace;
+	font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+#p1{
+	text align: center;
+	font-size: 15;
+}
+
+article{
+	text-align: center;
+	margin-left: 12.5%;
+	margin-right: 12.5%;
+	width: 75%;
+	border: 2px dashed black;
+}
+
+h1{
+	background-color: #D3D3D3
+}
+
+h2{
+	margin-top: 0;
+	font-family: monospace;
+}
+
+
+
