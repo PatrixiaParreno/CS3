@@ -88,14 +88,14 @@
 		</div>
 		
 		<script>
-			var player = prompt("Enter name of player:", "");
-			document.getElementById("playerName").innerHTML = player;
-			var player;
-
 			var pscore = 0;
 			var cscore = 0;
 			var random;
-
+			
+			var pName = prompt("Hi player! What is your name?");
+			document.getElementById("playerName").innerHTML = pName;
+			var pName;
+			
 			function rock() {
 				player = 0;
 				document.getElementById("playerChoice").src = "0.png";
@@ -108,9 +108,8 @@
 				document.getElementById("playerChoice").src = "1.png";
 				randomComputer();
 				checkWinner();
-
 			}
-
+			
 			function scissors() {
 				player = 2;
 				document.getElementById("playerChoice").src = "2.png";
@@ -124,28 +123,28 @@
 			}
 
 			function checkWinner(){
-				if (random != player){
+				if (random != pName){
 				if (random == 0){
-				if (player == 1){
+				if (pName == 1){
 				pscore += 1;
 				}		
-				if (player == 2){
+				if (pName == 2){
 				cscore += 1;
 				}
 				}
 				if (random == 1){
-				if (player == 2){
+				if (pName == 2){
 				pscore += 1;
 				}
-				if (player == 0){
+				if (pName == 0){
 				cscore += 1;
 				}
 				}
 				if (random == 2){
-				if (player == 0){
+				if (pName == 0){
 				pscore += 1;
 				}
-				if (player == 1){
+				if (pName == 1){
 				cscore += 1;
 				}
 				}
