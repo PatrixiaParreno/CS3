@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<title> PARRENO_FA11 </title>
+</head>
+<body>
+	<script>
+		var a = prompt ("Measurement of side 1");
+		var b = prompt ("Measurement of side 2");
+		var c = prompt ("Measurement of side 3");
+
+		determineTriangle(first,second,third);
+		function determineTriangle(a,b,c) {
+			if(a==b && b==c){
+				alert ("The triangle is EQUILATERAL.");
+			}
+			else if (a==b||b==c||c ==a){
+				alert ("The triangle is ISOCELES.");
+			}
+			else{
+				alert ("The triangle is SCALENE.");
+			}
+		}
+	</script>
+</body>
+</html>
