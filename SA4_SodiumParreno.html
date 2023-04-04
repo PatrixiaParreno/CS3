@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Car Deprecation Calculator</title>
+        <style>
+        	body {background: lightblue; 
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Car Depreciation Calculator </h1>
+	<h2> Your Car Model: <span id="model"> </span></h2>
+   	<h2> Car Cost: <span id="cost"> </span></h2>
+   	<h2> Age of your Car: <span id="age"> </span></h2>
+   	<h2> Good Condition?: <span id="condition"> </span></h2>
+   	<h2> Your Car's Current Market Value <span id="currentvalue"> </span></h2>
+    
+    <button onclick="enterCar()"> Enter your Car information </button>
+    <script>
+
+    	/* do not forget to place comments on the script */
+    	function enterCar() {
+        	carmodel = prompt("Enter Car Model");
+           	carcost = prompt("Enter Cost of the Car");
+           	carage = prompt("How old is your car?");
+          	good = confirm("In Good Condition? Ok for Yes / Cancel for No");
+           	model.innerHTML = carmodel;
+           	cost.innerHTML = carcost;
+           	age.innerHTML = carage;
+           	condition.innerHTML = (good) ? "Yes" : "No";      
+           	computeMarketValue(parseFloat(cost),parseFloat(age),good);
+		
+		function computerMarketValue(carCost, carAge, goodConditon) {
+			let cmv;
+
+			if (carAge >10) {
+				cmv = 70,000.00;
+			}
+			else if (carAge >= 8) {
+				cmv = 100,000.00;
+			}
+			else if (carAge >= 5) {
+				cmv = carCost * 0.75;
+			}
+			else {
+				cmv = carCost * 0.5;
+			}
+			
+			if (!goodCondition) {
+				cmv = cmv * 1.1;
+			}
+			
+			document.getByElementId("currentvalue").innerHTML = cmv.toFixed(2);
+        }
+    </script>
+    
+</body>
+</html>
+
