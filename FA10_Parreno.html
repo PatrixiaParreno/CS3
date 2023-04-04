@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Formative Assessment 10</title>
+	</head>
+	<body onload="random()">
+		<center>
+			<div>
+				<p id = "input"></p>
+				<p id = "expand"></p>
+			</div>
+		</center>
+		<script>
+		  var y;
+		  var z;
+		
+			function random(){
+				y = Math.floor(Math.random()*1001);
+				z = String(y).expand('');
+				document.getElementById("input").innerHTML = "Randomly generated number: " + y;
+				document.getElementById("expand").innerHTML = "breakdown:  " + z.slice(-3, -2)*100 + ",  " + z.slice(-2, -1)*10 + ",  " + z.slice(-1);
+				
+			}
+		
+		</script>
+		
+	</body>
+</html>
