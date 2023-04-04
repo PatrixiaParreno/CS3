@@ -21,59 +21,61 @@
     <button onclick="inputName()"> Click here to enter your name </button>
      <script>
 		function inputName(){
-			var name = prompt("Please enter your full name to recieve your fortune", ""); //ask the user to input their name
+			<!---user name input-->
+			var name = prompt("Please enter your full name to recieve your fortune", "");
 
-			document.getElementById ("thename").innerHTML = name; //displays name
+			<!---display name-->
+			document.getElementById ("thename").innerHTML = name;
 			var addLength = name.length; 
 			
 			while(addLength > 9) { //if length is a 2-digit number
 			addLength = (addLength - (addLength % 10)) / 10 + (addLength % 10); //function adds the 2-digits to make it 1-digit
 			}
 			
-			 <!-- user's fortune corresponding to their numerology digit -->
+			 <!---fortune that corresponds to the user's digit -->
 			switch(addLength){ 
 				case 0:
-					var destiny = ("you will win the lottery!");
+					var destiny = ("hindi ka maiwan ng carpool");
 					document.getElementById("fortune").innerHTML = destiny;
 					break;
 				case 1:
-					var destiny = ("your crush will confess to you!");
+					var destiny = ("makikita mo siya ngayon");
 					document.getElementById("fortune").innerHTML = destiny;
 					break;
 				case 2:
-					var destiny = ("you will have a high score in you exam!");
+					var destiny = ("humanap ka na ng iba");
 					document.getElementById("fortune").innerHTML = destiny;
 					break;
 				case 3:
-					var destiny = ("you will win the lottery!");
+					var destiny = ("miss ka na niya");
 					document.getElementById("fortune").innerHTML = destiny;
 					break;
 				case 4:
-					var destiny = ("your dreams will come true!");
+					var destiny = ("magiging friends kayo ;)");
 					document.getElementById("fortune").innerHTML = destiny;
 					break;
 				case 5:
-					var destiny = ("you will recieve a gift!");
+					var destiny = ("macrushback ka na");
 					document.getElementById("fortune").innerHTML = destiny;
 					break;
 				case 6:
-					var destiny = ("you will have super powers!");
+					var destiny = ("cute ka daw");
 					document.getElementById("fortune").innerHTML = destiny;
 					break;
 				case 7:
-					var destiny = ("you will have a new phone!");
+					var destiny = ("besties lang kayo, sorry :'D");
 					document.getElementById("fortune").innerHTML = destiny;
 					break
 				case 8:
-					var destiny = ("your parents will not scold you anymore!");
+					var destiny = ("walang kang pag-asa sa kanya");
 					document.getElementById("fortune").innerHTML = destiny;
 					break;
 				case 9:
-					var destiny = ("you will find your soulmate!");
+					var destiny = ("may uno ka sa stats!!");
 					document.getElementById("fortune").innerHTML = destiny;
 					break;	
 				default:
-					var destiny = ("no fortune for you 🙁");
+					var destiny = ("lilibrehin ka ni sir jimmy");
 					document.getElementById("fortune").innerHTML = destiny;
 			}
 		}
