@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> LNP Bikeshop </title>
+	<style>
+      span {color: blue; text-decoration:underline}
+      button {width: 100px; padding: 5px; background: pink;}
+	</style>
+
+	</head>
+<body>
+	<h1> Welcome to LNP Bikeshop! </h1>
+	<h2> Please select from the following bicycles </h2>
+	<ol>
+		<li> Mountain Bike price: 18,000.00 </li>
+		<li> Road price: 20,000.00 </li>
+		<li> Kiddie bike price: 4,000.00 </li>
+	</ol>
+    <p> Item selected : <span id="item"> </span> </p>
+	<p> Qty bought : <span id="qty"> </span> </p>
+	<p> Amount to pay for the item: <span id="bill"> </span> </p>
+	<p> Current Total Bill <span id="tbill"> </span> </p>
+	<button onclick="BuyItem"> Buy an Item </button>
+	<button onclick="clear"> Clear </button>
+    
+    <script>
+	function BuyItem() {
+	<!---for getting the user's input-->
+    		var item = prompt ("Please enter the item number of your choice");
+		var amount = promt ("Enter the number items");
+		
+		<!---to check if y is an integer-->
+		if (Number.isInteger(parseInt(amount)){
+			console.log ("The input is an integer");
+			<!---if y is validated, it will print the needed info-->
+			document.getElementById("item").innerHTML = "Item#" + x;
+			document.getElementById("quantity").innerHTML = y;
+			<!---to compute the user's total bill-->
+			if (item = 1){
+				document.getElementById("bill").innerHTML = "Php18,000.00"
+				document.getElementById("totalBill").innerHTML = ("Php" + (18,000 * amount));
+			}
+
+			else if (item = 2){
+				document.getElementById("bill").innerHTML = "Php20,000.00"
+				document.getElementById("totalBill").innerHTML = ("Php" + (20,000 * amount));
+    			}
+			else{
+				document.getElementById("bill").innerHTML = "Php4,000.00"
+				document.getElementById("totalBill").innerHTML = ("Php" + (4,000 * amount));
+			}
+		}
+
+		<!---This will alert the user if the value is not an integer-->
+		else {
+			alert("User's input is invalid");
+		}
+
+		<!---to clear the previously inputted values-->
+		function clear() {
+			document.getElementById("item").innerHTML=" ";
+			document.getElementById("quantity").innerHTML=" ";
+			document.getElementById("bill").innerHTML=" ";
+			document.getElementById("totalBill").innerHTML=" ";
+		}
+    </script>
+</body>
+
+</html>
