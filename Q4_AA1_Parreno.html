@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title> PARRENO_Genetic Coding </title>
+	</head>
+	<body>
+		<script>
+		var mrna = prompt("Enter an mRNA sequence");
+		var codonArray = [];
+		var codonOne = mrna.indexOf("AUG");
+		
+		if (codonOne === -1){
+			document.write("No start codon");
+		}
+		var startCodon = mrna.slice(codonOne);
+
+		for (let i = 0;  i < startCodon.length; i += 3){
+			let codonId = startCodon.slice(i, i + 3);
+			codonArray.push(codonId);
+
+		if (codonId === "UAA" || codonId === "UAG" || codonId === "UGA"){
+			for (let i = 0; i < startCodon.length; i += 3){
+			let codonId = startCodon.slice(i, i + 3);
+			codonArray.push(codonId);
+
+		if (codonId === "UAA" || codonId === "UAG" || codonId === "UGA"){
+			break;
+		}
+		}
+		document.write("[", codonArray.join(", "), " ]<br/>");
+
+		for (let a = 0; a < codonArray.length; a++){
+			let codon = codonArray[a];
+		}
+		}	
+		}
+		codonArray = codonArray.slice(0, -1);
+		document.write("[" ,coddonArray, "]");
+
+		for (a = 0; a < codonArray.length; a++){
+			let codon = codonArray[a];
+			var aminoAcid;
+			
+			switch(codon){
+				case "UUU":
+				case "UUC":
+					aminoAcid = "Phe"
+
+				case "AUG":
+					aminoAcid = "Met";
+					break;
+	
+				case "CUG":
+				case "UUA":
+				case "CUA":
+				case "UUG":
+				case "CUC":
+				case "CUU":
+					aminoAcid = "Leu";
+					break;
+
+				case "AUU":
+				case "AUC":
+				case "AUA":
+					aminoAcid = "Ile";
+					break;
+		
+				case "GCU":
+				case "GCC":
+				case "GCA":
+				case "GCG":
+					aminoAcid = "Ala";
+					break;
+
+				case "GUU":
+				case "GUG":
+				case "GUC":
+				case "GUA":
+					aminoAcid = "Val";
+					break;
+
+				case "ACU":
+				case "ACC":
+				case "ACA":
+				case "ACG":
+					aminoAcid = "Thr";
+					break;
+
+				case "UCU":
+				case "UCC":
+				case "UCA":
+				case "UCG":
+					aminoAcid = "Ser";
+					break;
+
+				case "CCU":
+				case "CCC":
+				case "CCA":
+				case "CCG":
+					aminoAcid = "Pro";
+					break;
+					
+
+				case "UAU":
+				case "UAC":
+					aminoAcid = "Tyr";
+					break;
+
+				case "AAA":
+				case "AAG":
+					aminoAcid = "Lys";
+					break;
+
+				case "UAA":
+				case "UAG":
+				case "UGA":
+					aminoAcid = "STOP";
+					break;
+	
+				case "AAU":
+				case "AAC":
+					aminoAcid = "Asn";
+					break;
+
+				case "CAU":
+				case "CAC":
+					aminoAcid = "His";
+					break;
+
+				case "CAA":
+				case "CAG":
+					aminoAcid = "Gln";
+					break;
+
+				case "GAU":
+				case "GAC":
+					aminoAcid = "Asp";
+					break;
+
+				case "AGU":
+				case "AGC":
+					aminoAcid = "Ser";
+					break;
+	
+				case "GAA":
+				case "GAG":
+					aminoAcid = "Glu";
+					break;
+		
+				case "UGU":
+				case "UGC":
+					aminoAcid = "Cys";
+					break;
+			
+				case "UGG":
+					aminoAcid = "Trp";
+					break;
+		
+				case "CGU":
+				case "CGC":
+				case "CGA":
+				case "CGG":
+				case "AGA":
+				case "AGG":
+					aminoAcid = "Arg";
+					break;
+
+				case "GGU":
+				case "GGC":
+				case "GGA":
+				case "GGG":
+					aminoAcid = "Gly";
+					break;
+			}
+			document.write("<br/>" + codon + "--->" + aminoAcid);
+			if (aminoAcid == "STOP"){
+				break;
+			}
+		}
+		</script>
+		</body>
+	</html>
