@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> PARRENO_FA14 </title>
+		<style>
+			*{
+				font-family: monospace
+
+			fieldset {
+				margin-bottom: 20px;
+				border-color: #5D25CE;
+				border-radius: 10px;
+				padding: 10px;
+				width: 50%;
+				margin: auto;
+				color: #333;
+				background-color: #DAC7FF;
+			}
+
+			legend {
+				font-size: 26px;
+				font-weight: bold;
+				color: white;
+				padding:10px;
+				background-color: #5D25CE;
+				padding: 5px 10px;
+				text-align:center;
+				border-radius: 10px;
+				padding-left:30px;
+				padding-right:30px;
+			}
+
+			h1 {
+				color: #5D25CE;
+				text-align:center;
+			}
+			
+		</style>
+			
+	</head>
+	<body>
+		<h1> Fill-up Sheet! </h1>
+		<form id="signup-form" onsubmit="return displayUserInfo();">
+			<fieldset>
+				<legend>Personal Information</legend>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" onfocus="focusFunction(this)" onblur="blurFunction(this)" required>
+
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username" onfocus="focusFunction(this)" onblur="blurFunction(this)" required>
+
+				<label for="gender">Gender:</label>
+				<select id="gender" name="gender" onfocus="focusFunction(this)" onblur="blurFunction(this)" required>
+					<option value="" disabled selected>Select gender</option>
+					<option value="male">Male</option>
+					<option value="female">Female</option>
+					<option value="prefer-not-to-mention">Prefer not to mention</option>
+				</select>
+
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password" onfocus="focusFunction(this)" onblur="blurFunction(this)" required>
+
+				<label for="email">Email Address:</label>
+				<input type="email" id="email" name="email" onfocus="focusFunction(this)" onblur="blurFunction(this)" required>
+
+				<label for="address">Address:</label>
+				<textarea id="address" name="address" onfocus="focusFunction(this)" onblur="blurFunction(this)" rows="4" cols="50"></textarea>
+
+				<label for="interest">Talk about yourself!:</label>
+				<textarea id="interest" name="interest" onfocus="focusFunction(this)" onblur="blurFunction(this)" rows="4" cols="50"></textarea>
+				
+				<input type="submit">
+				<input type="reset" id="reset" value="Reset" onclick="resetFunction()">
+			</fieldset>
+		
+			<!--output-->
+			<div id ="output"></div>
+
+			
+		</form>
+		
+		<script>
+			function focusFunction(inputElement) {
+				if (inputElement.value === "") {
+					inputElement.style.border = "2px solid #ccc";
+				} else {
+					inputElement.style.border = "2px solid green";
+				}
+			}
+
+			function blurFunction(inputElement) {
+				if (inputElement.value === "") {
+					inputElement.style.border = "2px solid red";
+				} else {
+					inputElement.style.border = "2px solid green";
+				}
+			}
+			
+			function displayUserInfo(){
+				var a = document.getElementById("name").value;
+				var b = document.getElementById("username").value;
+				var c = document.getElementById("gender").value;
+				var d = document.getElementById("password").value;
+				var e = document.getElementById("email").value; 
+				var f = document.getElementById("address").value; 
+				var g = document.getElementById("interest").value;
+				
+				var userInfo = 	"User's Information" + "<br>"+"<br>"+
+						"Name: " + a + "<br>" +
+						"Username: " + b + "<br>" +
+						"Gender: " + c + "<br>" +
+						"Password: " + d + "<br>" +
+						"Email: " + e + "<br>" +
+						"Address: " + f + "<br>" +
+						"Interest: " + g;
+								
+				document.getElementById("output").innerHTML = userInfo;
+				return false;
+			}
+			
+			function resetFunction() {
+				document.getElementById("output").innerHTML = "";
+				var inputElements = document.getElementsByTagName("input");
+				var textareaElements = document.getElementsByTagName("textarea");
+				var genderSelect = document.getElementById("gender");
+
+				for (var i = 0; i < inputElements.length; i++) {
+					inputElements[i].style.border = "2px solid #ccc";
+				}
+
+				for (var i = 0; i < textareaElements.length; i++) {
+					textareaElements[i].style.border = "2px solid #ccc";
+				}
+
+				genderSelect.style.border = "2px solid #ccc"; // Reset the border color of gender select
+				genderSelect.value = ""; // Reset the gender select to the blank option
+			}	
+			
+		</script>
+	</body>
+</html>
